@@ -14,8 +14,8 @@ class CircleShape(pygame.sprite.Sprite):
 
     def draw(self, screen):
         # must override
-        pass
+        pygame.draw.circle(screen, "white", self.position, self.radius, 2 )
 
     def update(self, dt):
         # must override
-        pass
+        self.position += (self.velocity * dt)
